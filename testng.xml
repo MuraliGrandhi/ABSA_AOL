@@ -6,7 +6,9 @@
     <test verbose="2" preserve-order="true" name="Test on Chrome">
         <classes>
             <class name="TestJourneys.CashSendTransaction"/>
-             <class name="TestJourneys.CashSendPlusTransaction"/>
+            <class name="TestJourneys.CashSendPlusTransaction"/>
+            <class name="TestJourneys.ImmediatePayment"/>
+            <class name="TestJourneys.InterAccountTransfer"/>
             </classes>
     </test>
 </suite>
