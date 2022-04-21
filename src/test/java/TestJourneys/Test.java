@@ -49,6 +49,7 @@ public class Test  extends BaseClass {
         pg.clickLogon();
     }
     @org.testng.annotations.Test(priority = 6)
+
     public void HandlePopup() throws InterruptedException, IOException {
         hp.ClickPopupclsbtn();
         Thread.sleep(5000);

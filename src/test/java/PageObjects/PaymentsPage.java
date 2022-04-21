@@ -2,9 +2,7 @@ package PageObjects;
 
 import BaseFramework.BaseClass;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import static BaseFramework.BaseClass.driver;
@@ -15,8 +13,7 @@ public class PaymentsPage extends BaseClass {
 //**************************ELEMENT DECLARATION START******************************************
 //------------------------------------------------------------------------------------------------------------------------
 
-    static By My_Benificiaries_Link = By.xpath("//div[text()='My beneficiaries - new and existing']");
-    static By Authorisations_Link = By.xpath("//div[text()='Authorisations']");
+     static By Authorisations_Link = By.xpath("//div[text()='Authorisations']");
     static By Purchase_PrePaid_Link = By.xpath("//div[text()='Purchase PrePaid']");
     static By Once_off_payment_Link = By.xpath("//div[text()='Once-off payment']");
     static By Manage_future_dated_transactions_Link = By.xpath("(//div[text()='Manage future-dated transactions']");
@@ -48,9 +45,9 @@ public class PaymentsPage extends BaseClass {
 //-------------------------CASH_SEND ELEMENTS END--------------------------------------------
 
 //--------------------------CASH_SEND_Plus ELEMENTS START---------------------------------------------------------------
-static By Cash_Send_Plus_Link = By.xpath("//div[text()='CashSend™ Plus']");
-static By Cash_send_plus_From_Acc_DD=By.id("cashSendPlusSingle-fromAccountNo");
-static By Cash_send_plus_Message=By.xpath("//div[@id='g69']/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[4]/div[3]/div[1]");
+    static By Cash_Send_Plus_Link = By.xpath("//div[text()='CashSend™ Plus']");
+    static By Cash_send_plus_From_Acc_DD=By.id("cashSendPlusSingle-fromAccountNo");
+    static By Cash_send_plus_Message=By.xpath("//div[@id='g69']/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[4]/div[3]/div[1]");
 //-------------------------CASH_SEND_Plus ELEMENTS END--------------------------------------------
 
 
@@ -67,6 +64,31 @@ static By Cash_send_plus_Message=By.xpath("//div[@id='g69']/div[1]/div[1]/div[1]
     static By Inter_account_TrnsfrTrnxMessage=By.xpath("//span[text()='Transfer successful']");
 
 //-------------------------Inter-Account Transfer ELEMENTS END--------------------------------------------
+
+//--------------------------My Beneficiaries ELEMENTS START---------------------------------------------------------------
+
+    static By My_Benificiaries_Link = By.xpath("//div[text()='My beneficiaries - new and existing']");
+    static By MyBnfrs_Pay_Single_Bnfcr = By.xpath("//li[text()='Pay single beneficiary']");
+    static By MyBnfrs_Bnfcr_Acc_DD=By.id("paySingle-searchBen");
+    static By MyBnfrs_From_Acc_DD=By.id("paySingle-fromAccount");
+    static By MyBnfrs_Amount_to_Send = By.id("paySingle-amount");
+    static By MyBnfrs_My_Reference=By.id("paySingle-myReference");
+    static By MyBnfrs_Bnfcr_Reference=By.id("paySingle-beneficiaryReference");
+    static By MyBnfrs_Notice_of_pymt_DD = By.id("paymentNotification-notBenType");
+    static By MyBnfrs_Next_Btn=By.xpath("(//div[text()='Next'])[2]");
+    static By MyBnfrs_Cancel_Btn=By.xpath("(//div[text()='Cancel'])[2]");
+    static By MyBnfrs_Reset_Btn=By.xpath("(//div[text()='Reset'])[2]");
+    static By MyBnfrs_Email_Id=By.id("paymentNotification-notBenEmail");
+    static By MyBnfrs_Recipent_Name=By.id("paymentNotification-notBenName");
+    static By MyBnfrs_Immediate_Payment_Yes_RadioBtn=By.id("payImmediate-Yes");
+    static By MyBnfrs_cnfm2_Pay_Btn=By.xpath("//div[text()='Pay']");
+    static By MyBnfrs_cnfm2_Cancel_Btn=By.xpath("(//div[text()='Cancel'])[3]");
+    static By MyBnfrs_cnfm2_Back_Btn=By.xpath("//div[text()='Back']");
+    static By MyBnfrs_cnfm_Message=By.xpath("(//div[@class='ui-message ui-message-warning ']//div)[2]");
+
+ //-------------------------My Beneficiaries ELEMENTS END--------------------------------------------
+
+
 
 //------------------------------------------------------------------------------------------------------------------------
 //**************************ELEMENT DECLARATION END******************************************
@@ -261,6 +283,82 @@ static By Cash_send_plus_Message=By.xpath("//div[@id='g69']/div[1]/div[1]/div[1]
     }
 //----------------------------Inter-Account Transfer ACTIONS END----------------------------------------------------------
 
+
+
+// -----------------------My Beneficiaries ACTIONS START----------------------------------------------------------
+
+    public static void ClickMyBnfcrLink() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.findElement(My_Benificiaries_Link).click();
+
+    }
+
+    public static void MyBnfcr_Click_Single_Bnfcr_Link() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.findElement(MyBnfrs_Pay_Single_Bnfcr).click();
+
+    }
+
+    public static void MyBnfcr_SelectFromAcc(String AccNo) throws InterruptedException {
+        driver.findElement(By.xpath("//*[@id=\"paySingle-fromAccount\"]/option[contains(text(),'"+AccNo+"')]")).click();
+        Thread.sleep(1000);
+    }
+
+    public static void MyBnfcr_ClickFromAccDD() throws InterruptedException {
+        driver.findElement(MyBnfrs_From_Acc_DD).click();
+        Thread.sleep(1000);
+    }
+
+    public static void MyBnfcr_EnterBeneficiaryACCNo(String BeneficiaryAcc) throws InterruptedException {
+        driver.findElement(MyBnfrs_Bnfcr_Acc_DD).sendKeys(BeneficiaryAcc);
+        Thread.sleep(1000);
+        driver.findElement(MyBnfrs_Bnfcr_Acc_DD).sendKeys(Keys.ARROW_DOWN);
+        Thread.sleep(1000);
+        driver.findElement(MyBnfrs_Bnfcr_Acc_DD).sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+    }
+
+    public static void MyBnfcr_EnterAmount(String Amount)
+    {
+        driver.findElement(MyBnfrs_Amount_to_Send).sendKeys(Amount);
+    }
+
+    public static void MyBnfcr_EnterMyReference(String MyReference)
+    {
+        driver.findElement(MyBnfrs_My_Reference).sendKeys(MyReference);
+    }
+
+    public static void MyBnfcr_Enter_Bnfcr_Reference(String MyReference)
+    {
+        driver.findElement(MyBnfrs_Bnfcr_Reference).sendKeys(MyReference);
+    }
+    public static void MyBnfcr_Click_Immediate_pymt_Yes_Option() throws InterruptedException {
+        driver.findElement(MyBnfrs_Immediate_Payment_Yes_RadioBtn).click();
+        Thread.sleep(1000);
+    }
+
+    public static void MyBnfcr_ClickNextbtn()
+    {
+        driver.findElement(MyBnfrs_Next_Btn).click();
+    }
+    public static void MyBnfcr_Click_Cnfm2_pay_btn()
+    {
+        driver.findElement(MyBnfrs_cnfm2_Pay_Btn).click();
+    }
+
+
+
+
+
+    public static void MyBnfcr_Checktranscationstatus()
+    {
+        String resultexpected="Immediate Interbank Payment scheduled successfully";
+        String resultActual = driver.findElement(MyBnfrs_cnfm_Message).getText();
+        Boolean Result = resultActual.contains(resultexpected);
+
+        Assert.assertEquals(Result,Boolean.TRUE);
+    }
+//----------------------------My Beneficiaries ACTIONS END----------------------------------------------------------
 
 
 //------------------------------------------------------------------------------------------------------------------------

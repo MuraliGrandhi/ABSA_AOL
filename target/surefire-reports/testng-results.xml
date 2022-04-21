@@ -2,36 +2,36 @@
 <testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-16T07:43:34 SAST" name="TestJourneys.Test" finished-at="2022-04-16T07:44:02 SAST" duration-ms="27890">
+  <suite started-at="2022-04-21T09:25:14 SAST" name="TestJourneys.Test" finished-at="2022-04-21T09:25:50 SAST" duration-ms="35994">
     <groups>
     </groups>
-    <test started-at="2022-04-16T07:43:34 SAST" name="Command line test" finished-at="2022-04-16T07:44:02 SAST" duration-ms="27890">
+    <test started-at="2022-04-21T09:25:14 SAST" name="Command line test" finished-at="2022-04-21T09:25:50 SAST" duration-ms="35994">
       <class name="TestJourneys.Test">
-        <test-method signature="LaunchBrowser()[pri:1, instance:TestJourneys.Test@52e677af]" started-at="2022-04-16T07:43:34 SAST" name="LaunchBrowser" finished-at="2022-04-16T07:43:47 SAST" duration-ms="12604" status="PASS">
+        <test-method signature="LaunchBrowser()[pri:1, instance:TestJourneys.Test@35083305]" started-at="2022-04-21T09:25:14 SAST" name="LaunchBrowser" finished-at="2022-04-21T09:25:26 SAST" duration-ms="11928" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchBrowser -->
-        <test-method signature="EnterCredentials()[pri:2, instance:TestJourneys.Test@52e677af]" started-at="2022-04-16T07:43:47 SAST" name="EnterCredentials" finished-at="2022-04-16T07:43:47 SAST" duration-ms="116" status="PASS">
+        <test-method signature="EnterCredentials()[pri:2, instance:TestJourneys.Test@35083305]" started-at="2022-04-21T09:25:26 SAST" name="EnterCredentials" finished-at="2022-04-21T09:25:26 SAST" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnterCredentials -->
-        <test-method signature="ClickNextBtn()[pri:3, instance:TestJourneys.Test@52e677af]" started-at="2022-04-16T07:43:47 SAST" name="ClickNextBtn" finished-at="2022-04-16T07:43:52 SAST" duration-ms="5055" status="PASS">
+        <test-method signature="ClickNextBtn()[pri:3, instance:TestJourneys.Test@35083305]" started-at="2022-04-21T09:25:26 SAST" name="ClickNextBtn" finished-at="2022-04-21T09:25:31 SAST" duration-ms="5066" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClickNextBtn -->
-        <test-method signature="HandlePassword()[pri:4, instance:TestJourneys.Test@52e677af]" started-at="2022-04-16T07:43:52 SAST" name="HandlePassword" finished-at="2022-04-16T07:43:52 SAST" duration-ms="176" status="PASS">
+        <test-method signature="HandlePassword()[pri:4, instance:TestJourneys.Test@35083305]" started-at="2022-04-21T09:25:31 SAST" name="HandlePassword" finished-at="2022-04-21T09:25:31 SAST" duration-ms="198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HandlePassword -->
-        <test-method signature="ClickLogon()[pri:5, instance:TestJourneys.Test@52e677af]" started-at="2022-04-16T07:43:52 SAST" name="ClickLogon" finished-at="2022-04-16T07:43:52 SAST" duration-ms="45" status="PASS">
+        <test-method signature="ClickLogon()[pri:5, instance:TestJourneys.Test@35083305]" started-at="2022-04-21T09:25:31 SAST" name="ClickLogon" finished-at="2022-04-21T09:25:31 SAST" duration-ms="41" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClickLogon -->
-        <test-method signature="HandlePopup()[pri:6, instance:TestJourneys.Test@52e677af]" started-at="2022-04-16T07:43:52 SAST" name="HandlePopup" finished-at="2022-04-16T07:44:02 SAST" duration-ms="9533" status="PASS">
+        <test-method signature="HandlePopup()[pri:6, instance:TestJourneys.Test@35083305]" started-at="2022-04-21T09:25:31 SAST" name="HandlePopup" finished-at="2022-04-21T09:25:50 SAST" duration-ms="18201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HandlePopup -->
-        <test-method signature="Closebrowser()[pri:200, instance:TestJourneys.Test@52e677af]" started-at="2022-04-16T07:44:02 SAST" name="Closebrowser" finished-at="2022-04-16T07:44:02 SAST" duration-ms="322" status="PASS">
+        <test-method signature="Closebrowser()[pri:200, instance:TestJourneys.Test@35083305]" started-at="2022-04-21T09:25:50 SAST" name="Closebrowser" finished-at="2022-04-21T09:25:50 SAST" duration-ms="371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Closebrowser -->

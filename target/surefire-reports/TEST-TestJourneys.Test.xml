@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="TestJourneys.Test" time="27.848" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="TestJourneys.Test" time="35.951" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.3.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="18"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.3.3 install"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.3.3 test"/>
     <property name="java.home" value="C:\Users\ab020sl\.jdks\openjdk-18-1"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -60,11 +60,11 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="TestJourneys.Test" name="LaunchBrowser" time="12.603"/>
-  <testcase classname="TestJourneys.Test" name="EnterCredentials" time="0.115"/>
-  <testcase classname="TestJourneys.Test" name="ClickNextBtn" time="5.055"/>
-  <testcase classname="TestJourneys.Test" name="HandlePassword" time="0.176"/>
-  <testcase classname="TestJourneys.Test" name="ClickLogon" time="0.045"/>
-  <testcase classname="TestJourneys.Test" name="HandlePopup" time="9.533"/>
-  <testcase classname="TestJourneys.Test" name="Closebrowser" time="0.321"/>
+  <testcase classname="TestJourneys.Test" name="LaunchBrowser" time="11.929"/>
+  <testcase classname="TestJourneys.Test" name="EnterCredentials" time="0.147"/>
+  <testcase classname="TestJourneys.Test" name="ClickNextBtn" time="5.066"/>
+  <testcase classname="TestJourneys.Test" name="HandlePassword" time="0.198"/>
+  <testcase classname="TestJourneys.Test" name="ClickLogon" time="0.041"/>
+  <testcase classname="TestJourneys.Test" name="HandlePopup" time="18.199"/>
+  <testcase classname="TestJourneys.Test" name="Closebrowser" time="0.371"/>
 </testsuite>

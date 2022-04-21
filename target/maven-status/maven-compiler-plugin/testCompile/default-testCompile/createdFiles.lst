@@ -1,9 +1,9 @@
-PageObjects\HomePage.class
 PageObjects\PaymentsPage.class
-BaseFramework\BaseClass.class
 PageObjects\passwordpage.class
 Utilities\ExtentList.class
-PageObjects\LoginPage.class
-TestJourneys\CashSendTransaction.class
 TestJourneys\Test.class
 Utilities\ExtentMaster.class
+PageObjects\HomePage.class
+BaseFramework\BaseClass.class
+PageObjects\LoginPage.class
+TestJourneys\CashSendTransaction.class
